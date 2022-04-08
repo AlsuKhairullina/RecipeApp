@@ -9,7 +9,7 @@ import UIKit
 
 class OnboardingPresenter: OnboardingPresenterInput {
     
-    weak var view: AuthPresenterOutput?
+    weak var view: OnboardingPresenterOutput?
     var coordinator: AuthCoordinator
 
     init(
@@ -20,14 +20,13 @@ class OnboardingPresenter: OnboardingPresenterInput {
     
     func viewDidLoad() {
         view?.setState(.start)
-        coordinator.start()
     }
     
     func goToSignUpScreen() {
-        coordinator.navigate(with: .logIn)
+        coordinator.navigate(with: .signUp)
     }
     
     func goToLogInScreen() {
-        coordinator.navigate(with: .signUp)
+        coordinator.navigate(with: .logIn)
     }
 }

@@ -16,11 +16,9 @@ class SignUpViewController: UIViewController {
 
     // MARK: - Private Properties
     
-    lazy var emailTextField = UITextField()
-    lazy var usernameTextField = UITextField()
-    lazy var passwordTextField = UITextField()
-    
-    var authManagement = FirebaseAuthManager()
+    lazy var emailTextField = customUITextField()
+    lazy var usernameTextField  = customUITextField()
+    lazy var passwordTextField = customUITextField()
     
     override func viewDidLoad() {
         
@@ -30,20 +28,27 @@ class SignUpViewController: UIViewController {
     
     func configureView() {
         
-        view.backgroundColor = .white
+        view.backgroundColor = .customWhite
         
-        let username = usernameTextField
-        usernameTextField.borderStyle = .bezel
-        usernameTextField.placeholder = "username"
-        view.addSubview(username)
-        usernameTextField.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(30)
+        let createUser = UILabel()
+        createUser.text = "Create new account"
+        createUser.font = .systemFont(ofSize: 30)
+        view.addSubview(createUser)
+        createUser.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
             make.top.equalToSuperview().inset(100)
         }
         
+        let username = usernameTextField
+        usernameTextField.placeholder = "Username"
+        view.addSubview(username)
+        usernameTextField.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.top.equalTo(createUser).inset(100)
+        }
+        
         let email = emailTextField
-        emailTextField.borderStyle = .bezel
-        emailTextField.placeholder = "email"
+        emailTextField.placeholder = "Email"
         view.addSubview(email)
         emailTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
@@ -51,8 +56,7 @@ class SignUpViewController: UIViewController {
     }
         
         let password = passwordTextField
-        passwordTextField.borderStyle = .bezel
-        passwordTextField.placeholder = "password"
+        passwordTextField.placeholder = "Password"
         view.addSubview(password)
         passwordTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
@@ -60,15 +64,12 @@ class SignUpViewController: UIViewController {
         }
         
         let registerButton = UIButton()
-        registerButton.backgroundColor = UIColor(red: 109/255, green: 172/255, blue: 186/255, alpha: 1)
-        registerButton.setTitle("Register", for: .normal)
-        registerButton.titleLabel?.font = UIFont(name: "Mustica Pro", size: 20)
-        registerButton.layer.cornerRadius = 20
+        registerButton.createRectangleButton(buttonTilte: "register", font: "Mustica Pro")
         registerButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         view.addSubview(registerButton)
         registerButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(200)
+            make.width.equalTo(300)
             make.top.equalTo(passwordTextField).inset(50)
             make.height.equalTo(40)
         }
@@ -96,6 +97,12 @@ extension SignUpViewController: AuthPresenterOutput {
         case .failure:
             self.view.backgroundColor = .red
         }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "Invalid values", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(alert, animated: true)
     }
 }
 

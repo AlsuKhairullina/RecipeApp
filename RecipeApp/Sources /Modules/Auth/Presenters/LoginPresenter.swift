@@ -11,23 +11,27 @@ class LoginPresenter: LogInPresenterInput {
     
     var coordinator: AuthCoordinator
     var authManager: FirebaseAuthManager
+    var validationService: ValiadationService
     weak var view: AuthPresenterOutput?
     
     init(
         coordinator: AuthCoordinator,
-        authManager: FirebaseAuthManager
+        authManager: FirebaseAuthManager,
+        validationService: ValiadationService
+        
     ) {
         self.coordinator = coordinator
         self.authManager = authManager
+        self.validationService = validationService
     }
 
     func viewDidLoad() {
         
         view?.setState(.start)
-        coordinator.start()
     }
     
     func login(email: String, password: String) {
         authManager.logUserIn(withEmail: email, password: password)
+        coordinator.finishAuth()
     }
 }

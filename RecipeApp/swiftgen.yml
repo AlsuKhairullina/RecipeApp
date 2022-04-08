@@ -1,0 +1,23 @@
+**Images**
+    
+      xcassets:
+          inputs: Path/Assets.xcassets
+          outputs:
+              - templateName: swift4
+                output: Path/SwiftGen/assets.swift
+    
+  **Colors**
+    
+      colors:
+          inputs: Path/CustomAppColors.txt
+          outputs:
+              - templateName: swift4
+                output: Path/SwiftGen/colors.swift
+    
+  **Fonts**
+    
+      fonts:
+          inputs: Path/Fonts
+          outputs:
+              - templateName: swift4
+                output: Path/SwiftGen/fonts.swift
