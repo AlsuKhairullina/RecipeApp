@@ -32,14 +32,14 @@ final class AuthCoordinator: CoordinatorProtocol {
             vc.presenter = presenter
             navigationController.pushViewController(vc, animated: true)
         case .signUp:
+            let presenter = SignUpPresenter(coordinator: self, authManagement: FirebaseAuthManager(), validationService: ValiadationService())
             let vc = SignUpViewController()
-            let presenter = SignUpPresenter(coordinator: self, authManagement: FirebaseAuthManager())
             presenter.view = vc
             vc.presenter = presenter
             navigationController.pushViewController(vc, animated: true)
         case .logIn:
+            let presenter = LoginPresenter(coordinator: self, authManager: FirebaseAuthManager(), validationService: ValiadationService())
             let vc = LogInViewController()
-            let presenter = LoginPresenter(coordinator: self, authManager: FirebaseAuthManager())
             presenter.view = vc
             vc.presenter = presenter
             navigationController.pushViewController(vc, animated: true)
@@ -47,7 +47,7 @@ final class AuthCoordinator: CoordinatorProtocol {
     }
 
     func start() {
-        navigate(with: .signUp)
+        navigate(with: .onboarding)
     }
     
     func finishAuth() {

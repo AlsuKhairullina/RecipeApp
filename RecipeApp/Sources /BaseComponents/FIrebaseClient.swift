@@ -8,9 +8,15 @@
 import UIKit
 import Firebase
 
+protocol FirebaseClientProtocols: AnyObject {
+    func createUser(withEmail email: String, password: String, username: String)
+    func logUserIn(withEmail email: String, password: String)
+    func isLoggedIn() -> Bool
+}
+
 // протколы добавить 
 
-class FirebaseAuthManager {
+class FirebaseAuthManager: FirebaseClientProtocols {
     
     func createUser (withEmail email: String, password: String, username: String) {
         
@@ -31,8 +37,7 @@ class FirebaseAuthManager {
                     return
                 }
                 
-                print("successufelly signed up")
-                
+                print("successufully signed up")
             })
         }
     }
@@ -46,8 +51,12 @@ class FirebaseAuthManager {
                 return
             }
             
-            print("successufelly logged in")
+            print("successufully logged in")
         }
+    }
+    
+    func isLoggedIn() -> Bool {
+        Auth.auth().currentUser != nil
     }
 }
 

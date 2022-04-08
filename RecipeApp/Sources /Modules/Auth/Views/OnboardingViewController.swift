@@ -19,27 +19,50 @@ class OnboardingViewController: UIViewController {
     
     private func configureView() {
         
+        view.backgroundColor = .customWhite
+        
+        let welcomeLabel = UILabel()
+        welcomeLabel.text = "Cooking was never that easy"
+        welcomeLabel.numberOfLines = 0
+        welcomeLabel.textAlignment = .center
+        view.addSubview(welcomeLabel)
+        welcomeLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(150)
+            make.centerX.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
+        
+        let launchImage = UIImageView()
+        launchImage.image = UIImage(named: "launchPic")
+        view.addSubview(launchImage)
+        launchImage.snp.makeConstraints { make in
+            make.top.equalTo(welcomeLabel).inset(50)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(400)
+            make.height.equalTo(400)
+        }
+        
         let loginButton = UIButton()
-        loginButton.setTitle("log in", for: .normal)
-        loginButton.titleLabel?.font = UIFont(name: "Mustica Pro", size: 20)
+        loginButton.createRectangleButton(buttonTilte: "Log In", font: "Mustica Pro")
+        loginButton.titleLabel?.font = UIFont(name: "New York", size: 20)
         loginButton.addTarget(self, action: #selector(goToLogIn), for: .touchUpInside)
         view.addSubview(loginButton)
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(200)
-            make.top.equalToSuperview().inset(100)
+            make.width.equalTo(300)
+            make.top.equalTo(launchImage).inset(450)
             make.height.equalTo(40)
         }
         
-        let signupButton = UIButton()
-        signupButton.backgroundColor = .red
-        signupButton.setTitle("sign up", for: .normal)
-        signupButton.setTitleColor(.black, for: .normal)
-        signupButton.addTarget(self, action: #selector(goToSignUp), for: .touchUpInside)
-        view.addSubview(signupButton)
-        signupButton.snp.makeConstraints { make in
+        let createUserButton = UIButton()
+        createUserButton.createRectangleButton(buttonTilte: "Create an account", font: "Mustica Pro")
+        createUserButton.addTarget(self, action: #selector(goToSignUp), for: .touchUpInside)
+        view.addSubview(createUserButton)
+        createUserButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
+            make.width.equalTo(300)
             make.top.equalTo(loginButton).inset(50)
+            make.height.equalTo(40)
         }
     }
     
@@ -52,7 +75,7 @@ class OnboardingViewController: UIViewController {
     }
 }
 
-extension OnboardingViewController: AuthPresenterOutput {
+extension OnboardingViewController: OnboardingPresenterOutput {
    
     func setState(_ state: AuthState) {
         switch state {

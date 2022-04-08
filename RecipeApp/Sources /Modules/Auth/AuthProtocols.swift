@@ -25,5 +25,12 @@ protocol OnboardingPresenterInput: AnyObject {
 
 protocol AuthPresenterOutput: AnyObject {
     func setState(_: AuthState)
+    func showAlert()
 }
+
+protocol OnboardingPresenterOutput: AnyObject {
+    func setState(_: AuthState)
+}
+
+
 

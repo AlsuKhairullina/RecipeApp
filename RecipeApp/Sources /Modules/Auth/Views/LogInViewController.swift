@@ -82,5 +82,11 @@ extension LogInViewController: AuthPresenterOutput {
             self.view.backgroundColor = .red
         }
     }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "Invalid values", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(alert, animated: true)
+    }
 }
 
