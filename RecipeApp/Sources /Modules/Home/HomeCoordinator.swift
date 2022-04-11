@@ -9,24 +9,24 @@ import UIKit
 
 final class HomeCoordinator: CoordinatorProtocol {
     
+    var parentCoordinator: TabBarCoordinator
+    
     enum HomeFlow {
         case home
     }
     
-    var parentCoordinator: TabBarCoordinator?
+    init(parentCoordinator: TabBarCoordinator) {
+        self.parentCoordinator = parentCoordinator
+    }
     
-    lazy var rootViewController: UIViewController = UIViewController()
-        
     private let navigationController = UINavigationController()
     
     func navigate(with route: HomeFlow) {
         switch route {
         case .home:
+            let presenter = HomePresenter(coordinator: self)
             let vc = HomeViewController()
-            vc.view.backgroundColor = .blue
-            let presenter = HomePresenter()
             presenter.view = vc
-            presenter.coordinator = self
             vc.presenter = presenter
             navigationController.pushViewController(vc, animated: true)
         }
@@ -34,11 +34,6 @@ final class HomeCoordinator: CoordinatorProtocol {
     
     func start() {
         navigate(with: .home)
-    }
-    
-    func openBlackScreen(model: String) {
-        let vc = UIViewController()
-        navigationController.pushViewController(vc, animated: true)
     }
     
     func configureMainController() -> UIViewController {

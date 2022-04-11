@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14013FD427FA036700BDC4D7 /* FIrebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14013FD327FA036700BDC4D7 /* FIrebaseClient.swift */; };
+		14013FD427FA036700BDC4D7 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14013FD327FA036700BDC4D7 /* AuthClient.swift */; };
 		14013FD627FA0A2600BDC4D7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14013FD527FA0A2600BDC4D7 /* LoginPresenter.swift */; };
 		14013FD827FA2B1500BDC4D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14013FD727FA2B1500BDC4D7 /* GoogleService-Info.plist */; };
 		141F21E227EF804F00D91221 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F21E127EF804F00D91221 /* HomeViewController.swift */; };
@@ -32,6 +32,10 @@
 		147F536427EEA6FA004F933F /* AddRecipeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F536327EEA6FA004F933F /* AddRecipeCoordinator.swift */; };
 		147F536627EEA709004F933F /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F536527EEA709004F933F /* ProfileCoordinator.swift */; };
 		149360912800B904001C5E11 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149360902800B904001C5E11 /* AuthTests.swift */; };
+		149360A028018F60001C5E11 /* AddRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493609F28018F60001C5E11 /* AddRecipePresenter.swift */; };
+		149360A228019070001C5E11 /* AddRecipeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149360A128019070001C5E11 /* AddRecipeProtocols.swift */; };
+		149360A4280190CC001C5E11 /* AddRecipeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149360A3280190CC001C5E11 /* AddRecipeState.swift */; };
+		149360A62801A4AC001C5E11 /* FirestoreClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = 149360A52801A4AC001C5E11 /* FirestoreClient .swift */; };
 		1496A21127F0EA68006400D4 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496A21027F0EA67006400D4 /* SignUpPresenter.swift */; };
 		1496A21327F0EB26006400D4 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496A21227F0EB26006400D4 /* AuthState.swift */; };
 		1496A21527F0EC4F006400D4 /* AuthProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496A21427F0EC4F006400D4 /* AuthProtocols.swift */; };
@@ -62,7 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14013FD327FA036700BDC4D7 /* FIrebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseClient.swift; sourceTree = "<group>"; };
+		14013FD327FA036700BDC4D7 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		14013FD527FA0A2600BDC4D7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		14013FD727FA2B1500BDC4D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		141F21E127EF804F00D91221 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,10 @@
 		147F536327EEA6FA004F933F /* AddRecipeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeCoordinator.swift; sourceTree = "<group>"; };
 		147F536527EEA709004F933F /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		149360902800B904001C5E11 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
+		1493609F28018F60001C5E11 /* AddRecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipePresenter.swift; sourceTree = "<group>"; };
+		149360A128019070001C5E11 /* AddRecipeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeProtocols.swift; sourceTree = "<group>"; };
+		149360A3280190CC001C5E11 /* AddRecipeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeState.swift; sourceTree = "<group>"; };
+		149360A52801A4AC001C5E11 /* FirestoreClient .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreClient .swift"; sourceTree = "<group>"; };
 		1496A21027F0EA67006400D4 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		1496A21227F0EB26006400D4 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		1496A21427F0EC4F006400D4 /* AuthProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocols.swift; sourceTree = "<group>"; };
@@ -160,10 +168,10 @@
 		1455DB6027EE594E007AB9F6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1493609A28018781001C5E11 /* Model */,
+				149360992801877A001C5E11 /* Presenter */,
+				1493609828018775001C5E11 /* Views */,
 				147F535927EE856E004F933F /* HomeCoordinator.swift */,
-				141F21E127EF804F00D91221 /* HomeViewController.swift */,
-				141F21E327EF80CB00D91221 /* HomePresenter.swift */,
-				141F21E727EF81C600D91221 /* HomeModel.swift */,
 				1466A0D527FDB938001545DF /* HomeProtocols.swift */,
 			);
 			path = Home;
@@ -183,8 +191,11 @@
 		1455DB6227EE595C007AB9F6 /* AddRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				1493609D28018F37001C5E11 /* Presenter */,
+				1493609C28018F31001C5E11 /* Model */,
+				1493609B28018F29001C5E11 /* Views */,
 				147F536327EEA6FA004F933F /* AddRecipeCoordinator.swift */,
-				141F21F327EFB80600D91221 /* AddRecipeViewController.swift */,
+				149360A128019070001C5E11 /* AddRecipeProtocols.swift */,
 			);
 			path = AddRecipe;
 			sourceTree = "<group>";
@@ -224,6 +235,54 @@
 				14A0B60627F9DC020010AF0E /* OnboardingViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1493609828018775001C5E11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				141F21E127EF804F00D91221 /* HomeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		149360992801877A001C5E11 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				141F21E327EF80CB00D91221 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1493609A28018781001C5E11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				141F21E727EF81C600D91221 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1493609B28018F29001C5E11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				141F21F327EFB80600D91221 /* AddRecipeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1493609C28018F31001C5E11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				149360A3280190CC001C5E11 /* AddRecipeState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1493609D28018F37001C5E11 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1493609F28018F60001C5E11 /* AddRecipePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		14CC94DE27DBA42700F11B21 = {
@@ -339,9 +398,10 @@
 			isa = PBXGroup;
 			children = (
 				1455DB6D27EE5B96007AB9F6 /* CoordinatorProtocol.swift */,
-				14013FD327FA036700BDC4D7 /* FIrebaseClient.swift */,
+				14013FD327FA036700BDC4D7 /* AuthClient.swift */,
 				1466A0D727FDBBD2001545DF /* PresenterProtocols.swift */,
 				1466A0D927FDBC1C001545DF /* BaseState.swift */,
+				149360A52801A4AC001C5E11 /* FirestoreClient .swift */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -551,7 +611,8 @@
 			files = (
 				1455DB7027EE5C03007AB9F6 /* AppCoordinator.swift in Sources */,
 				14C91D9327FF8D3B00DD3E6B /* CustomButtons.swift in Sources */,
-				14013FD427FA036700BDC4D7 /* FIrebaseClient.swift in Sources */,
+				14013FD427FA036700BDC4D7 /* AuthClient.swift in Sources */,
+				149360A4280190CC001C5E11 /* AddRecipeState.swift in Sources */,
 				1466A0DA27FDBC1C001545DF /* BaseState.swift in Sources */,
 				14C91D8F27FF7BBC00DD3E6B /* CustomColors.swift in Sources */,
 				14C91D9827FFA4F700DD3E6B /* CustomLabel.swift in Sources */,
@@ -562,6 +623,7 @@
 				14C91D9127FF808100DD3E6B /* CustomTextFields.swift in Sources */,
 				141F21E427EF80CB00D91221 /* HomePresenter.swift in Sources */,
 				147F535A27EE856E004F933F /* HomeCoordinator.swift in Sources */,
+				149360A62801A4AC001C5E11 /* FirestoreClient .swift in Sources */,
 				141F21EE27EFB1A900D91221 /* SearchPresenter.swift in Sources */,
 				14C8DE5627F0A846000E07B7 /* AuthCoordinator.swift in Sources */,
 				141F21F627EFB84200D91221 /* ProfileViewController.swift in Sources */,
@@ -574,10 +636,12 @@
 				1496A21327F0EB26006400D4 /* AuthState.swift in Sources */,
 				147F536427EEA6FA004F933F /* AddRecipeCoordinator.swift in Sources */,
 				141F21E827EF81C600D91221 /* HomeModel.swift in Sources */,
+				149360A028018F60001C5E11 /* AddRecipePresenter.swift in Sources */,
 				147F535827EE830E004F933F /* LogInViewController.swift in Sources */,
 				147F536627EEA709004F933F /* ProfileCoordinator.swift in Sources */,
 				141F21EA27EFAF1E00D91221 /* SearchViewController.swift in Sources */,
 				141F21F427EFB80600D91221 /* AddRecipeViewController.swift in Sources */,
+				149360A228019070001C5E11 /* AddRecipeProtocols.swift in Sources */,
 				14CC94EB27DBA42700F11B21 /* AppDelegate.swift in Sources */,
 				1496A21527F0EC4F006400D4 /* AuthProtocols.swift in Sources */,
 				14C91D9A28008F5600DD3E6B /* ValidationService.swift in Sources */,

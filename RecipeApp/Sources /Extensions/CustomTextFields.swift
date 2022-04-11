@@ -10,22 +10,34 @@ import UIKit
 open class customUITextField: UITextField {
 
     func setup() {
-        let border = CALayer()
-        let width = CGFloat(2.0)
-        border.borderColor = UIColor.darkGray.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width,
-                                height: self.frame.size.height)
-        border.borderWidth = width
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-        self.backgroundColor = .textFieldColor
-            
+        self.backgroundColor = .none
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor.customGray.cgColor
+        self.layer.cornerRadius = 20
     }
+    
+    var textPadding = UIEdgeInsets(
+            top: 10,
+            left: 20,
+            bottom: 10,
+            right: 20
+        )
+    
+    open override func textRect(forBounds bounds: CGRect) -> CGRect {
+            let rect = super.textRect(forBounds: bounds)
+            return rect.inset(by: textPadding)
+        }
+
+      open override func editingRect(forBounds bounds: CGRect) -> CGRect {
+            let rect = super.editingRect(forBounds: bounds)
+            return rect.inset(by: textPadding)
+        }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()

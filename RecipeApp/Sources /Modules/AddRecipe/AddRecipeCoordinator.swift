@@ -9,24 +9,35 @@ import UIKit
 
 final class AddRecipeCoordinator: CoordinatorProtocol {
     
-    var parentCoordinator: TabBarCoordinator?
+    var parentCoordinator: TabBarCoordinator
+    
+    init(parentCoordinator: TabBarCoordinator) {
+        self.parentCoordinator = parentCoordinator
+    }
     
     private let navigationController = UINavigationController()
     
-    enum Route {
-        case main
+    enum AddRecipeFlow {
+        case addRecipe
+    }
+    
+    func navigate(with route: AddRecipeFlow) {
+        switch route {
+        case .addRecipe:
+            let presenter = AddRecipePresenter(coordinator: self)
+            let vc = AddRecipeViewController()
+            presenter.view = vc
+            vc.presenter = presenter
+            navigationController.pushViewController(vc, animated: true)
+        }
     }
     
     func start() {
-        print()
+        navigate(with: .addRecipe)
     }
-    
-    func navigate(with route: Route) {
-        print()
-    }
-    
+
     func configureMainController() -> UIViewController {
-        navigate(with: .main)
+        navigate(with: .addRecipe)
         return navigationController
     }
 

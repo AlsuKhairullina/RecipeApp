@@ -27,35 +27,39 @@ class LogInViewController: UIViewController {
     func configureView() {
         view.backgroundColor = .white
         
-        let email = emailTextField
-        emailTextField.borderStyle = .bezel
-        emailTextField.placeholder = "email"
-        view.addSubview(email)
+        let loginLabel = UILabel()
+        loginLabel.text = "Log In"
+        loginLabel.font = .boldSystemFont(ofSize: 30)
+        view.addSubview(loginLabel)
+        loginLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(100)
+        }
+        
+        let emailTextField = customUITextField()
+        emailTextField.placeholder = "Email"
+        view.addSubview(emailTextField)
         emailTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalToSuperview().inset(200)
-    }
+            make.top.equalTo(loginLabel).inset(60)
+        }
         
-        let password = passwordTextField
-        passwordTextField.borderStyle = .bezel
-        passwordTextField.placeholder = "password"
-        view.addSubview(password)
+        let passwordTextField = customUITextField()
+        passwordTextField.placeholder = "Password"
+        view.addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalTo(emailTextField).inset(50)
+            make.top.equalTo(emailTextField).inset(60)
         }
         
         let loginButton = UIButton()
-        loginButton.backgroundColor = UIColor(red: 109/255, green: 172/255, blue: 186/255, alpha: 1)
-        loginButton.setTitle("Log In", for: .normal)
-        loginButton.titleLabel?.font = UIFont(name: "Mustica Pro", size: 20)
-        loginButton.layer.cornerRadius = 20
+        loginButton.createButton(buttonTilte: "Sign Up")
         loginButton.addTarget(self, action: #selector(handleLogIn), for: .touchUpInside)
         view.addSubview(loginButton)
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(200)
-            make.top.equalTo(passwordTextField).inset(50)
+            make.width.equalTo(300)
+            make.top.equalTo(passwordTextField).inset(60)
             make.height.equalTo(40)
         }
     }
