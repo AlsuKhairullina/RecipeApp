@@ -12,16 +12,26 @@ class HomeViewController: UIViewController {
     // MARK: - Internal Properties
 
     var presenter: HomePresenterInput?
-    var coordinator: HomeCoordinator?
-
-    // MARK: - Private Properties
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
-        view.backgroundColor = .blue
-
-        title = "Стартовая страница #1"
+        configureView()
+    }
+    
+    func configureView() {
+        
+        view.backgroundColor = .customWhite
+        
+        let yourFeedLabel = UILabel()
+        yourFeedLabel.text = "Your feed"
+        yourFeedLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        yourFeedLabel.textColor = .customGreen
+        view.addSubview(yourFeedLabel)
+        yourFeedLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(30)
+            make.top.equalToSuperview().inset(80)
+        }
     }
 }
 

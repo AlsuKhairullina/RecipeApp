@@ -24,6 +24,8 @@ class OnboardingViewController: UIViewController {
         let welcomeLabel = UILabel()
         welcomeLabel.text = "Cooking was never that easy"
         welcomeLabel.numberOfLines = 0
+        welcomeLabel.textColor = .customGreen
+        welcomeLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         welcomeLabel.textAlignment = .center
         view.addSubview(welcomeLabel)
         welcomeLabel.snp.makeConstraints { make in
@@ -43,8 +45,7 @@ class OnboardingViewController: UIViewController {
         }
         
         let loginButton = UIButton()
-        loginButton.createRectangleButton(buttonTilte: "Log In", font: "Mustica Pro")
-        loginButton.titleLabel?.font = UIFont(name: "New York", size: 20)
+        loginButton.createButton(buttonTilte: "Log In")
         loginButton.addTarget(self, action: #selector(goToLogIn), for: .touchUpInside)
         view.addSubview(loginButton)
         loginButton.snp.makeConstraints { make in
@@ -55,7 +56,7 @@ class OnboardingViewController: UIViewController {
         }
         
         let createUserButton = UIButton()
-        createUserButton.createRectangleButton(buttonTilte: "Create an account", font: "Mustica Pro")
+        createUserButton.createButton(buttonTilte: "Create an account")
         createUserButton.addTarget(self, action: #selector(goToSignUp), for: .touchUpInside)
         view.addSubview(createUserButton)
         createUserButton.snp.makeConstraints { make in

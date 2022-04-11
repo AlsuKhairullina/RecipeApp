@@ -18,9 +18,9 @@ final class TabBarCoordinator: CoordinatorProtocol {
     
     var parentCoordinator: AppCoordinator?
     
-    lazy var homeCoordinator: HomeCoordinator = HomeCoordinator()
+    lazy var homeCoordinator: HomeCoordinator = HomeCoordinator(parentCoordinator: self)
     lazy var ordersCoordinator: SearchCoordinator = SearchCoordinator()
-    lazy var addCoordinator: AddRecipeCoordinator = AddRecipeCoordinator()
+    lazy var addCoordinator: AddRecipeCoordinator = AddRecipeCoordinator(parentCoordinator: self)
     lazy var profileCoordinator: ProfileCoordinator = ProfileCoordinator()
     
     lazy var rootViewController = UITabBarController()
@@ -41,20 +41,20 @@ final class TabBarCoordinator: CoordinatorProtocol {
     func configureMainController() -> UIViewController {
         let homeViewController = homeCoordinator.configureMainController()
         homeCoordinator.parentCoordinator = self
-        homeViewController.tabBarItem = UITabBarItem(title: "home", image: UIImage(), selectedImage: nil)
+        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(), selectedImage: nil)
 
         
         let searchViewController = ordersCoordinator.configureMainController()
         ordersCoordinator.parentCoordinator = self
-        searchViewController.tabBarItem = UITabBarItem(title: "search", image: UIImage(), selectedImage: nil)
+        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(), selectedImage: nil)
         
         let addViewController = addCoordinator.configureMainController()
         addCoordinator.parentCoordinator = self
-        addViewController.tabBarItem = UITabBarItem(title: "add", image: UIImage(), selectedImage: nil)
+        addViewController.tabBarItem = UITabBarItem(title: "Add", image: UIImage(), selectedImage: nil)
         
         let profileViewContoller = profileCoordinator.configureMainController()
         profileCoordinator.parentCoordinator = self
-        profileViewContoller.tabBarItem = UITabBarItem(title: "profile", image: UIImage(), selectedImage: nil)
+        profileViewContoller.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(), selectedImage: nil)
         
         rootViewController.viewControllers = [homeViewController, searchViewController, addViewController, profileViewContoller]
         

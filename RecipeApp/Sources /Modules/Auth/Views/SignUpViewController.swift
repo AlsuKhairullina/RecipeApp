@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController {
         
         let createUser = UILabel()
         createUser.text = "Create new account"
-        createUser.font = .systemFont(ofSize: 30)
+        createUser.font = .boldSystemFont(ofSize: 30)
         view.addSubview(createUser)
         createUser.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(username)
         usernameTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalTo(createUser).inset(100)
+            make.top.equalTo(createUser).inset(60)
         }
         
         let email = emailTextField
@@ -52,7 +52,7 @@ class SignUpViewController: UIViewController {
         view.addSubview(email)
         emailTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalTo(usernameTextField).inset(50)
+            make.top.equalTo(usernameTextField).inset(60)
     }
         
         let password = passwordTextField
@@ -60,17 +60,17 @@ class SignUpViewController: UIViewController {
         view.addSubview(password)
         passwordTextField.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalTo(emailTextField).inset(50)
+            make.top.equalTo(emailTextField).inset(60)
         }
         
         let registerButton = UIButton()
-        registerButton.createRectangleButton(buttonTilte: "register", font: "Mustica Pro")
+        registerButton.createButton(buttonTilte: "Sign Up")
         registerButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
         view.addSubview(registerButton)
         registerButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalTo(300)
-            make.top.equalTo(passwordTextField).inset(50)
+            make.top.equalTo(passwordTextField).inset(60)
             make.height.equalTo(40)
         }
     }

@@ -10,14 +10,14 @@ import UIKit
 class HomePresenter: HomePresenterInput {
     
     weak var view: HomePresenterOutput?
-    var coordinator: HomeCoordinator?
+    var coordinator: HomeCoordinator
+    
+    init(coordinator: HomeCoordinator) {
+        self.coordinator = coordinator
+    }
 
     func viewDidLoad() {
         view?.setState(.start)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.coordinator?.start()
-        }
     }
     
 }

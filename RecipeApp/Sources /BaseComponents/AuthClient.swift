@@ -14,8 +14,6 @@ protocol FirebaseClientProtocols: AnyObject {
     func isLoggedIn() -> Bool
 }
 
-// протколы добавить 
-
 class FirebaseAuthManager: FirebaseClientProtocols {
     
     func createUser (withEmail email: String, password: String, username: String) {

@@ -8,11 +8,12 @@
 import UIKit
 
 extension UIButton {
-    func createRectangleButton(buttonTilte: String, font: String) {
+    func createButton(buttonTilte: String) {
         let button = self // changes made here
         button.setTitle(buttonTilte, for: .normal)
-        button.titleLabel?.font = UIFont(name: font, size: 20)
         button.backgroundColor = UIColor.customGreen
         button.tintColor = UIColor.customWhite
+        button.layer.cornerRadius = 20
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
        }
 }
