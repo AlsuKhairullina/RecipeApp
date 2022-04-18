@@ -10,14 +10,17 @@ import Foundation
 class AddRecipePresenter: AddRecipePresenterInput {
     
     weak var view: AddRecipePresenterOutput?
-    var coordinator: AddRecipeCoordinator
+    private var coordinator: AddRecipeCoordinator
     
     init(coordinator: AddRecipeCoordinator) {
         self.coordinator = coordinator
     }
-
+    
     func viewDidLoad() {
         view?.setState(.start)
     }
-
+    
+    func goNextScreen() {
+        coordinator.navigate(with: .addDescription)
+    }
 }

@@ -7,9 +7,9 @@
 
 import UIKit
 
-open class customUITextField: UITextField {
-
-    func setup() {
+open class RoundedTextField: UITextField {
+    
+    func setupInitialState() {
         self.backgroundColor = .none
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.customGray.cgColor
@@ -17,29 +17,29 @@ open class customUITextField: UITextField {
     }
     
     var textPadding = UIEdgeInsets(
-            top: 10,
-            left: 20,
-            bottom: 10,
-            right: 20
-        )
+        top: 10,
+        left: 20,
+        bottom: 10,
+        right: 20
+    )
     
     open override func textRect(forBounds bounds: CGRect) -> CGRect {
-            let rect = super.textRect(forBounds: bounds)
-            return rect.inset(by: textPadding)
-        }
-
-      open override func editingRect(forBounds bounds: CGRect) -> CGRect {
-            let rect = super.editingRect(forBounds: bounds)
-            return rect.inset(by: textPadding)
-        }
-
+        let rect = super.textRect(forBounds: bounds)
+        return rect.inset(by: textPadding)
+    }
+    
+    open override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        let rect = super.editingRect(forBounds: bounds)
+        return rect.inset(by: textPadding)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        setupInitialState()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        setupInitialState()
     }
 }

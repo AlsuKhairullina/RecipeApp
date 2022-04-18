@@ -9,14 +9,12 @@ import SnapKit
 
 class LogInViewController: UIViewController {
 
-    // MARK: - Internal Properties
-
     var presenter: LogInPresenterInput?
     
-    // MARK: - Private Properties
-    
-    lazy var passwordTextField = UITextField()
-    lazy var emailTextField = UITextField()
+    private lazy var loginLabel = UILabel()
+    private lazy var passwordTextField = UITextField()
+    private lazy var emailTextField = UITextField()
+    private lazy var loginButton = UIButton()
 
     override func viewDidLoad() {
         
@@ -25,41 +23,47 @@ class LogInViewController: UIViewController {
     }
     
     func configureView() {
+        
         view.backgroundColor = .white
         
-        let loginLabel = UILabel()
+        let loginLabel = loginLabel
         loginLabel.text = "Log In"
         loginLabel.font = .boldSystemFont(ofSize: 30)
         view.addSubview(loginLabel)
         loginLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().inset(100)
+            make.top.equalToSuperview().inset(80)
         }
         
-        let emailTextField = customUITextField()
+        let emailTextField = RoundedTextField()
         emailTextField.placeholder = "Email"
+        emailTextField.autocorrectionType = .no
+        emailTextField.textContentType = .emailAddress
         view.addSubview(emailTextField)
         emailTextField.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalTo(loginLabel).inset(60)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.8)
+            make.top.equalTo(loginLabel.snp.bottom).offset(20)
         }
         
-        let passwordTextField = customUITextField()
+        let passwordTextField = RoundedTextField()
         passwordTextField.placeholder = "Password"
+        passwordTextField.isSecureTextEntry = true
         view.addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.top.equalTo(emailTextField).inset(60)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.8)
+            make.top.equalTo(emailTextField.snp.bottom).offset(20)
         }
         
-        let loginButton = UIButton()
-        loginButton.createButton(buttonTilte: "Sign Up")
+        let loginButton = loginButton
+        loginButton.createButton(buttonTilte: "Log In")
         loginButton.addTarget(self, action: #selector(handleLogIn), for: .touchUpInside)
         view.addSubview(loginButton)
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(300)
-            make.top.equalTo(passwordTextField).inset(60)
+            make.width.equalToSuperview().multipliedBy(0.8)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
             make.height.equalTo(40)
         }
     }

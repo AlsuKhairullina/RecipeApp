@@ -9,6 +9,7 @@ import UIKit
 
 protocol AddRecipePresenterInput: AnyObject {
     func viewDidLoad()
+    func goNextScreen()
 }
 
 protocol AddRecipePresenterOutput: UIViewController {
