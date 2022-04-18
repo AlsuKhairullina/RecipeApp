@@ -10,9 +10,9 @@ import Foundation
 
 class SignUpPresenter: SignUpPresenterInput {
     
-    var coordinator: AuthCoordinator
-    var authManagement: FirebaseAuthManager
-    var validationService: ValiadationService
+    private var coordinator: AuthCoordinator
+    private var authManagement: FirebaseAuthManager
+    private var validationService: ValiadationService
     weak var view: AuthPresenterOutput?
     
     init(

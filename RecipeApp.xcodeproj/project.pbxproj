@@ -10,6 +10,7 @@
 		14013FD427FA036700BDC4D7 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14013FD327FA036700BDC4D7 /* AuthClient.swift */; };
 		14013FD627FA0A2600BDC4D7 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14013FD527FA0A2600BDC4D7 /* LoginPresenter.swift */; };
 		14013FD827FA2B1500BDC4D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14013FD727FA2B1500BDC4D7 /* GoogleService-Info.plist */; };
+		1410B4D82808288B00024801 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410B4D72808288B00024801 /* RecipeModel.swift */; };
 		141F21E227EF804F00D91221 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F21E127EF804F00D91221 /* HomeViewController.swift */; };
 		141F21E427EF80CB00D91221 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F21E327EF80CB00D91221 /* HomePresenter.swift */; };
 		141F21E827EF81C600D91221 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141F21E727EF81C600D91221 /* HomeModel.swift */; };
@@ -51,6 +52,8 @@
 		14CC94F227DBA42700F11B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CC94F027DBA42700F11B21 /* Main.storyboard */; };
 		14CC94F427DBA42900F11B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CC94F327DBA42900F11B21 /* Assets.xcassets */; };
 		14CC94F727DBA42900F11B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CC94F527DBA42900F11B21 /* LaunchScreen.storyboard */; };
+		14E015B52806DD8A003B1016 /* AddDesciptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E015B42806DD8A003B1016 /* AddDesciptionPresenter.swift */; };
+		14E015B72806DDA6003B1016 /* AddDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E015B62806DDA6003B1016 /* AddDescriptionViewController.swift */; };
 		AC9129D026695AB30E5C7630 /* Pods_RecipeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AFE51B02DE311A55BC2222 /* Pods_RecipeAppTests.framework */; };
 		E9B12F5B53C85401DD4ADC51 /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEB514337B6D90069C9EF0A /* Pods_RecipeApp.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,7 @@
 		14013FD327FA036700BDC4D7 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		14013FD527FA0A2600BDC4D7 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		14013FD727FA2B1500BDC4D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1410B4D72808288B00024801 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		141F21E127EF804F00D91221 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		141F21E327EF80CB00D91221 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		141F21E727EF81C600D91221 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 		14CC94F627DBA42900F11B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14CC94F827DBA42900F11B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14CC94FD27DBA42900F11B21 /* RecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14E015B42806DD8A003B1016 /* AddDesciptionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDesciptionPresenter.swift; sourceTree = "<group>"; };
+		14E015B62806DDA6003B1016 /* AddDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDescriptionViewController.swift; sourceTree = "<group>"; };
 		5FA863F5AB5CB67C1ACC0F03 /* Pods-RecipeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeAppTests.release.xcconfig"; path = "Target Support Files/Pods-RecipeAppTests/Pods-RecipeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		67AFE51B02DE311A55BC2222 /* Pods_RecipeAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEB514337B6D90069C9EF0A /* Pods_RecipeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				141F21F327EFB80600D91221 /* AddRecipeViewController.swift */,
+				14E015B62806DDA6003B1016 /* AddDescriptionViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				149360A3280190CC001C5E11 /* AddRecipeState.swift */,
+				1410B4D72808288B00024801 /* RecipeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				1493609F28018F60001C5E11 /* AddRecipePresenter.swift */,
+				14E015B42806DD8A003B1016 /* AddDesciptionPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -616,6 +625,7 @@
 				1466A0DA27FDBC1C001545DF /* BaseState.swift in Sources */,
 				14C91D8F27FF7BBC00DD3E6B /* CustomColors.swift in Sources */,
 				14C91D9827FFA4F700DD3E6B /* CustomLabel.swift in Sources */,
+				14E015B52806DD8A003B1016 /* AddDesciptionPresenter.swift in Sources */,
 				1496A21127F0EA68006400D4 /* SignUpPresenter.swift in Sources */,
 				147F535427EE8118004F933F /* SignUpViewController.swift in Sources */,
 				1466A0D627FDB938001545DF /* HomeProtocols.swift in Sources */,
@@ -632,6 +642,7 @@
 				141F21E227EF804F00D91221 /* HomeViewController.swift in Sources */,
 				14013FD627FA0A2600BDC4D7 /* LoginPresenter.swift in Sources */,
 				1455DB6E27EE5B96007AB9F6 /* CoordinatorProtocol.swift in Sources */,
+				14E015B72806DDA6003B1016 /* AddDescriptionViewController.swift in Sources */,
 				14A0B60727F9DC020010AF0E /* OnboardingViewController.swift in Sources */,
 				1496A21327F0EB26006400D4 /* AuthState.swift in Sources */,
 				147F536427EEA6FA004F933F /* AddRecipeCoordinator.swift in Sources */,
@@ -642,6 +653,7 @@
 				141F21EA27EFAF1E00D91221 /* SearchViewController.swift in Sources */,
 				141F21F427EFB80600D91221 /* AddRecipeViewController.swift in Sources */,
 				149360A228019070001C5E11 /* AddRecipeProtocols.swift in Sources */,
+				1410B4D82808288B00024801 /* RecipeModel.swift in Sources */,
 				14CC94EB27DBA42700F11B21 /* AppDelegate.swift in Sources */,
 				1496A21527F0EC4F006400D4 /* AuthProtocols.swift in Sources */,
 				14C91D9A28008F5600DD3E6B /* ValidationService.swift in Sources */,

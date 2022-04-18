@@ -10,6 +10,11 @@ import UIKit
 class OnboardingViewController: UIViewController {
     
     var presenter: OnboardingPresenterInput?
+    
+    private lazy var welcomeLabel = UILabel()
+    private lazy var launchImage = UIImageView()
+    private lazy var loginButton = UIButton()
+    private lazy var createUserButton = UIButton()
 
     override func viewDidLoad() {
         
@@ -21,7 +26,7 @@ class OnboardingViewController: UIViewController {
         
         view.backgroundColor = .customWhite
         
-        let welcomeLabel = UILabel()
+        let welcomeLabel = welcomeLabel
         welcomeLabel.text = "Cooking was never that easy"
         welcomeLabel.numberOfLines = 0
         welcomeLabel.textColor = .customGreen
@@ -29,42 +34,47 @@ class OnboardingViewController: UIViewController {
         welcomeLabel.textAlignment = .center
         view.addSubview(welcomeLabel)
         welcomeLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(150)
             make.centerX.equalToSuperview()
-            make.centerX.equalToSuperview()
+            make.top.lessThanOrEqualToSuperview().inset(100)
         }
         
-        let launchImage = UIImageView()
+        let launchImage = launchImage
         launchImage.image = UIImage(named: "launchPic")
+        launchImage.contentMode = .scaleAspectFit
         view.addSubview(launchImage)
         launchImage.snp.makeConstraints { make in
-            make.top.equalTo(welcomeLabel).inset(50)
+            make.top.greaterThanOrEqualTo(welcomeLabel).inset(50)
             make.centerX.equalToSuperview()
-            make.width.equalTo(400)
-            make.height.equalTo(400)
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.9)
+            make.height.equalTo(launchImage.snp.width).multipliedBy(1.0/1.0)
         }
         
-        let loginButton = UIButton()
+        
+        let loginButton = loginButton
         loginButton.createButton(buttonTilte: "Log In")
         loginButton.addTarget(self, action: #selector(goToLogIn), for: .touchUpInside)
         view.addSubview(loginButton)
         loginButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(300)
-            make.top.equalTo(launchImage).inset(450)
+            make.width.equalToSuperview().multipliedBy(0.8)
             make.height.equalTo(40)
+            make.top.greaterThanOrEqualTo(launchImage.snp.bottom).offset(20)
         }
         
-        let createUserButton = UIButton()
+        
+        let createUserButton = createUserButton
         createUserButton.createButton(buttonTilte: "Create an account")
         createUserButton.addTarget(self, action: #selector(goToSignUp), for: .touchUpInside)
         view.addSubview(createUserButton)
         createUserButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.width.equalTo(300)
-            make.top.equalTo(loginButton).inset(50)
+            make.width.equalToSuperview().multipliedBy(0.8)
             make.height.equalTo(40)
+            make.top.equalTo(loginButton).inset(50)
+            make.bottom.greaterThanOrEqualToSuperview().offset(-50)
         }
+        
     }
     
     @objc private func goToLogIn() {

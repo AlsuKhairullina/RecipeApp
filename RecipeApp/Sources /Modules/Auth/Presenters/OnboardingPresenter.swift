@@ -10,8 +10,8 @@ import UIKit
 class OnboardingPresenter: OnboardingPresenterInput {
     
     weak var view: OnboardingPresenterOutput?
-    var coordinator: AuthCoordinator
-
+    private var coordinator: AuthCoordinator
+    
     init(
         coordinator: AuthCoordinator)
     {

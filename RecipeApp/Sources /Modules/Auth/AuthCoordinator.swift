@@ -9,15 +9,14 @@ import UIKit
 
 final class AuthCoordinator: CoordinatorProtocol {
     
-    var parentCoordinator: AppCoordinator
+    private var parentCoordinator: AppCoordinator
+    private let navigationController = UINavigationController()
     
     enum Route {
         case onboarding
         case signUp
         case logIn
     }
-    
-    private let navigationController = UINavigationController()
     
     init(parentCoordinator: AppCoordinator) {
         self.parentCoordinator = parentCoordinator

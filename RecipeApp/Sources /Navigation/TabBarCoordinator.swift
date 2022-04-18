@@ -19,7 +19,7 @@ final class TabBarCoordinator: CoordinatorProtocol {
     var parentCoordinator: AppCoordinator?
     
     lazy var homeCoordinator: HomeCoordinator = HomeCoordinator(parentCoordinator: self)
-    lazy var ordersCoordinator: SearchCoordinator = SearchCoordinator()
+    lazy var searchCoordinator: SearchCoordinator = SearchCoordinator()
     lazy var addCoordinator: AddRecipeCoordinator = AddRecipeCoordinator(parentCoordinator: self)
     lazy var profileCoordinator: ProfileCoordinator = ProfileCoordinator()
     
@@ -44,8 +44,8 @@ final class TabBarCoordinator: CoordinatorProtocol {
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(), selectedImage: nil)
 
         
-        let searchViewController = ordersCoordinator.configureMainController()
-        ordersCoordinator.parentCoordinator = self
+        let searchViewController = searchCoordinator.configureMainController()
+        searchCoordinator.parentCoordinator = self
         searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(), selectedImage: nil)
         
         let addViewController = addCoordinator.configureMainController()
