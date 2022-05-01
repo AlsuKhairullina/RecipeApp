@@ -39,9 +39,9 @@ final class AddRecipeCoordinator: CoordinatorProtocol {
         }
     }
     
-    func start() {
-        navigate(with: .addNamePhoto)
-    }
+//    func start() {
+//        navigate(with: .addNamePhoto)
+//    }
 
     func configureMainController() -> UIViewController {
         navigate(with: .addNamePhoto)
