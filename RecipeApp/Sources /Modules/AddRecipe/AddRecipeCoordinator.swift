@@ -16,8 +16,6 @@ final class AddRecipeCoordinator: CoordinatorProtocol {
         self.parentCoordinator = parentCoordinator
     }
     
-    // передача модели в координаторе
-    
     enum AddRecipeFlow {
         case addNamePhoto
         case addDescription
