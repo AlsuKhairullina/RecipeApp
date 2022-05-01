@@ -45,7 +45,6 @@
 		14C91D8F27FF7BBC00DD3E6B /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C91D8E27FF7BBC00DD3E6B /* CustomColors.swift */; };
 		14C91D9127FF808100DD3E6B /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C91D9027FF808100DD3E6B /* CustomTextFields.swift */; };
 		14C91D9327FF8D3B00DD3E6B /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C91D9227FF8D3B00DD3E6B /* CustomButtons.swift */; };
-		14C91D9827FFA4F700DD3E6B /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C91D9727FFA4F700DD3E6B /* CustomLabel.swift */; };
 		14C91D9A28008F5600DD3E6B /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C91D9928008F5600DD3E6B /* ValidationService.swift */; };
 		14CC94EB27DBA42700F11B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC94EA27DBA42700F11B21 /* AppDelegate.swift */; };
 		14CC94ED27DBA42700F11B21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CC94EC27DBA42700F11B21 /* SceneDelegate.swift */; };
@@ -108,7 +107,6 @@
 		14C91D9027FF808100DD3E6B /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		14C91D9227FF8D3B00DD3E6B /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
 		14C91D9427FF95D700DD3E6B /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		14C91D9727FFA4F700DD3E6B /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		14C91D9928008F5600DD3E6B /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		14CC94E727DBA42700F11B21 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CC94EA27DBA42700F11B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 				14C91D8E27FF7BBC00DD3E6B /* CustomColors.swift */,
 				14C91D9027FF808100DD3E6B /* CustomTextFields.swift */,
 				14C91D9227FF8D3B00DD3E6B /* CustomButtons.swift */,
-				14C91D9727FFA4F700DD3E6B /* CustomLabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -624,7 +621,6 @@
 				149360A4280190CC001C5E11 /* AddRecipeState.swift in Sources */,
 				1466A0DA27FDBC1C001545DF /* BaseState.swift in Sources */,
 				14C91D8F27FF7BBC00DD3E6B /* CustomColors.swift in Sources */,
-				14C91D9827FFA4F700DD3E6B /* CustomLabel.swift in Sources */,
 				14E015B52806DD8A003B1016 /* AddDesciptionPresenter.swift in Sources */,
 				1496A21127F0EA68006400D4 /* SignUpPresenter.swift in Sources */,
 				147F535427EE8118004F933F /* SignUpViewController.swift in Sources */,
